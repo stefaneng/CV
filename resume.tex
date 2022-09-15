@@ -1,0 +1,163 @@
+\documentclass[11pt,a4paper]{moderncv}
+\moderncvtheme[blue]{classic}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=.6,margin=.5in,top=.3in]{geometry}
+\usepackage{multicol}
+\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}
+\AtBeginDocument{\recomputelengths}
+\usepackage[style=numeric,maxbibnames=20,sorting=ynt,backend=biber,firstinits=true]{biblatex}
+\addbibresource{references.bib}
+
+\AfterPreamble{
+    \hypersetup{
+      pdfauthor={Stefan Eng},
+      pdftitle={Stefan Eng Resume},
+      pdfsubject={Stefan Eng Resume},
+      colorlinks,
+      breaklinks,
+      urlcolor=blue,
+      citecolor=black
+    }
+}
+
+% personal data
+\firstname{Stefan}
+\familyname{Eng}
+\phone{+1 (818) 331-5307}
+\email{stefaneng13@gmail.com}
+%\address{1811 Parnell Avenue, Apt 4}{Los Angeles, CA 90025}
+\extrainfo{\href{https://github.com/stefaneng}{github.com/stefaneng}\\\href{https://orcid.org/0000-0002-5245-6507}{orcid.org/0000-0002-5245-6507}}
+
+
+\nopagenumbers{}
+
+\renewcommand*{\namefont}{\fontsize{36}{36}\mdseries\upshape}
+
+\begin{document}
+\maketitle
+
+\section{Education}
+\cventry{2011--2016}{Mathematics Bachelor of Science \& Computer Science Bachelor of Science}{\newline California State University}{Northridge}{}{}
+\cventry{2018--2020}{Master's Programme in Mathematical Statistics}{\newline University of Gothenburg}{}{}{Thesis: Phase-Type Distributions for Finite Interacting Particle Systems. Advisor: Jeff Steif}
+
+\section{Work Experience}
+
+\cventry{June 2013 - Aug 2013}{Data Scientist, Intern}{Caltech/JPL}{Pasadena}{}{
+  \begin{itemize}
+    \item Exploratory analysis of help desk data to reduce the time to recovery for incidents
+    \item Combined network outage data, system alert data, and help desk data to help operations better visualize relationships between systems.
+  \end{itemize}
+}
+
+\cventry{Sep 2013 - April 2014}{Software Developer, Intern}{Caltech/JPL}{Pasadena}{}{
+\begin{itemize}
+\item Processed atmospheric data with Python and IDL.
+% \item Maintained and improved the MLS website with PHP and Javascript.
+\item Automated repetitive, manual tasks in data processing pipeline with bash and python scripts.
+\end{itemize}
+}
+
+\cventry{April 2014 - May 2016}{Data Scientist, Intern}{Caltech/JPL}{Pasadena}{}{
+  \begin{itemize}
+  \item Managed data processing pipeline for Cassini and Dawn missions which included Scala/Apache Spark ingest code and managing Elasticsearch cluster.
+  \item Developed an API that provides a common interface to mission's telemetry data which supports data visualization dashboards.
+    \item Wrote parsers to bring old proprietary data formats into common and modern formats. Included extracting data, using Apache Tika, XML parsing, web scraping, and writing custom parser combinators in Scala. Data was then displayed through a web application, written in AngularJS.
+  \end{itemize}
+}
+
+\cventry{August 2016 - June 2018}{Programmer/Analyst}{CRESST/UCLA}{Los Angeles}{}{
+  \begin{itemize}
+    \item Worked on research projects involving natural language processing (NLP) using Python with focus on similarity between sentences \cite{eng_tan_2018}.
+    \item Created an interactive game using Angular2/Ionic where a student attempts to solve tasks by programming an on-screen vehicle.
+      \item Worked on the Implementation Readiness Package (IRP) for Smarter Balanced, using Java and Spring web framework.
+      \begin{itemize}
+      \item Implemented components for the automation of a Test Delivery System which would simulate a student taking a test by interfacing with Smarter Balanced REST APIs.
+      \item Developed module to report summary statistics for the Computer Adaptive Testing (CAT) algorithm.
+      \end{itemize}
+  \end{itemize}
+}
+
+\cventry{June 2019 - August 2019}{Biostatistics - Scientific Computing and Consulting, Intern}{Novartis}{Basel, Switzerland}{}{
+    \begin{itemize}
+        \item Developed an exploratory survival analysis R shiny application for statisticians working in oncology. Featured Cox proportional hazard models and Kaplan Meier plots.
+        \item Created \textit{subpat}, a package of R shiny modules for subpopulations, subgroups, ad-hoc table listings, as well as survival analysis modules. Source code available at:  \href{https://github.com/Novartis/subpat}{github.com/Novartis/subpat}
+        \item Analyzed Novartis' clinical trial protocol amendments for 2018.
+    \end{itemize}
+}
+
+\cventry{Auguest 2020 - Current}{Biostatistician}{Boutros Lab}{UCLA}{Los Angeles}{
+    \begin{itemize}
+        \item Provided statistical consulting to lab on a daily basis.
+        \item Physiological and lifestyle state time-series analyses for exercise oncology projects collaboration with Memorial Sloan Kettering Cancer Center (MSKCC)
+        \item Developed joint genotyping GATK pipeline and performed joint genotyping on UCLA COVID dataset of over 700 patients which became part of the Host Genetics Initiative COVID-19 study \cite{Covid2022}.
+        \item First author on prospective study on active surveillance patients to predict upgrading on prostate biopsy \cite{EngLiss2022}. Collaboration with University of Texas Health San Antonio.
+        \item Assisted with crosstalk PCA adjustment method for over-representation analysis to find enriched pathways \cite{Livingstone2021}.
+        \item Part of the computer science and statistics interview team and developed new coding questions and statistical questions. Performed 40+ computer science and statistics interviews.
+    \end{itemize}
+}
+
+\section{Programming Languages}
+\cvline{}{\small R, Python, Java}
+\section{Tools}
+\cvline{}{\small Linux, \LaTeX, Git, Docker, Nextflow}
+
+\section{Programming Awards}
+  \begin{itemize}
+      \item \textbf{First place} at Senior Design Showcase in Computer Science division (CSUN, Fall 2015 - Spring 2016) for work on \textit{partyq}, a realtime, editable playlist aggregated from many different music sources implemented with React.js with ES6, Node.js backend with Socket.io, and Postgres database.
+      \item \textbf{First place} in 2016 HackPoly Hackathon for \textit{Smart Trashcan} that detected when the trashcan was full with an arduino which was displayed on a web application that leveraged AWS technologies such as Amazon Echo to allow for voice controlled updates.
+      \item \textbf{First place} in 2014 SS12 Code for a Cause Competition for \textit{CamAcc (Camera for the visually impaired)}, an Android camera application controlled via speech for visually impaired users.
+  \end{itemize}
+
+% \section{Course Work}
+% \cvline{}{\textbf{Mathematics}
+% \begin{multicols}{2}
+%   \begin{itemize}
+%       \item Mathematical Statistics I and II
+%       \item Introduction to Probability 
+%       \item Numerical Analysis
+%       \item Undergraduate Seminar on Set Theory
+%       \item[]\mbox{} Presented lecture on Axiom of Choice
+%       \item Scientific Computing
+%       \item Advanced Calculus 
+%       \item[]\mbox{}(Introduction to Analysis)
+%       \item Differential Equations
+%       \item Abstract Algebra I and II
+%       \item Linear Algebra I and II
+%       \item Discrete Mathematics
+%   \end{itemize}
+%   \end{multicols}
+% }
+
+% \cvline{}{\textbf{Computer Science}
+% \begin{multicols}{2}
+%   \begin{itemize}
+%       \item Data Structures and Algorithms
+%       \item Computer Architecture
+%       \item Combinatorial Algorithms
+%       \item Operating Systems
+%       \item Software Engineering
+%       \item Open Source Software
+%       \item Computer System Security
+%       \item Senior Design
+%       \item Database Design
+%       \item Data Mining
+%   \end{itemize}
+%   \end{multicols}
+% }
+
+%\nocite{*} % Write all references
+%\bibliographystyle{plain}
+%\bibliography{references}
+
+\section{Unpublished Work}
+\begin{itemize}
+    \item \textit{A Digital, Decentralized Clinical Trial of Exercise Therapy}. We created and evaluated the Digital Platform for Exercise (DPEx), a method enabling all study procedures to be conducted remotely in patient’s homes with parallel high-resolution profiling of physiological response to exercise therapy. I analyzed the physiological time-series data collected from the smartwatches. Code is available here: \href{https://github.com/uclahs-cds/public-R-DigitalExercisePlatform}{github.com/uclahs-cds/public-R-DigitalExercisePlatform}
+    \item \textit{Proportional Hazards Assumption Violations in Survival Analysis of Tumour mRNA Abundance Data}. Mentored high school student Dean Kim (Harvard 2026) on project investigating frequency of genes in which in which the proportional hazards assumption was violated in a Cox proportional hazard model. Meta-analysis was conducted across seventeen breast cancer and four non-small-cell lung carcinoma (NSCLC) cohorts.
+    \item \textit{Exercise relation to clonal hematopoiesis (CH) in the MSK-IMPACT cohort}. Mentored two undergraduate students on an exploratory analysis of the relationship between exercise at time of cancer diagnosis and clonal hematopoiesis.
+    \item \textit{HistogramZoo: A Generalized Framework for Segmentation and Characterization of 1-D Histograms}. We developed a computational framework for the segmentation, denoising and statistical characterization of discrete data and provide examples of its application to NGS data. The original application was designed for m6a methylation data for soon to be submitted work: \textit{The Landscape of N6 - Methyladenosine in Localised Primary Prostate Cancer}. Code is available here: \href{https://github.com/uclahs-cds/public-R-HistogramZoo}{github.com/uclahs-cds/public-R-HistogramZoo}
+
+\end{itemize}
+
+\printbibliography[title={Publications}]
+
+\end{document}
